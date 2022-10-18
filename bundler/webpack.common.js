@@ -54,6 +54,29 @@ module.exports = {
                 ]
             },
 
+            //SCSS
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+            },
+
             // Images
             {
                 test: /\.(jpg|png|gif|svg)$/,
